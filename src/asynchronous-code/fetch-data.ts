@@ -1,4 +1,4 @@
-export function fetchData() {
+export function fetchData(): Promise<string> {
   return new Promise((resolve) => {
     return setTimeout(() => {
       resolve('peanut butter');
@@ -6,10 +6,10 @@ export function fetchData() {
   });
 }
 
-export function fetchError() {
+export function fetchError(): Promise<string> {
   return new Promise((resolve, reject) => {
     return setTimeout(() => {
-      reject('error reason');
+      reject('error');
     }, 1000);
   });
 }
