@@ -15,7 +15,7 @@ export function fetchError(): Promise<string> {
 }
 
 export function fetchCallback(cb: any) {
-  setTimeout(() => {
-    cb('peanut butter');
+  return setTimeout(() => {
+    return cb('peanut butter');
   }, 1000);
 }
