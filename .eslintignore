@@ -7,5 +7,3 @@ build
 ./dist
 dist
 
-*.json
-*.d.ts
