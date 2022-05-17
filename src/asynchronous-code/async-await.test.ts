@@ -5,10 +5,12 @@ test('the data is peanut butter', async () => {
   expect(data).toBe('peanut butter');
 });
 
-test('the fetch fails with an error', async () => {
+test('the fetch fails with an error1', async () => {
   expect.assertions(1);
+
   try {
-    return await fetchData();
+    const result = await fetchData();
+    expect(result).toMatch('peanut butter');
   } catch (e) {
     return expect(e).toMatch('error');
   }

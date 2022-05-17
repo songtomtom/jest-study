@@ -1,7 +1,7 @@
 export function fetchData(): Promise<string> {
   return new Promise((resolve) => {
     return setTimeout(() => {
-      resolve('peanut butter');
+      return resolve('peanut butter');
     }, 1000);
   });
 }
@@ -9,7 +9,13 @@ export function fetchData(): Promise<string> {
 export function fetchError(): Promise<string> {
   return new Promise((resolve, reject) => {
     return setTimeout(() => {
-      reject('error');
+      return reject('error');
     }, 1000);
   });
+}
+
+export function fetchCallback(cb: any) {
+  setTimeout(() => {
+    cb('peanut butter');
+  }, 1000);
 }
